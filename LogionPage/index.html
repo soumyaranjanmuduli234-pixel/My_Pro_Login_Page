@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="left-panel">
+      <div class="panel-content login-panel-content active" id="loginPanelContent">
+        <h1>WELCOME!</h1>
+        <p>Sign in to continue and access your account instantly.</p>
+      </div>
+
+      <div class="panel-content register-panel-content" id="registerPanelContent">
+        <h1>HELLO!</h1>
+        <p>Create your account and get started with a beautiful experience.</p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <form class="form login-form active" id="loginForm" novalidate>
+        <h2 class="form-title">Sign In</h2>
+
+        <div class="input-group">
+          <input type="email" id="loginEmail" placeholder="Email" required autocomplete="email" />
+          <span class="input-icon">✉</span>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password" />
+          <span class="input-icon">🔒</span>
+        </div>
+
+        <a href="#" class="forgot-link">Forgot password?</a>
+        <button type="submit" class="btn-primary">Sign In</button>
+
+        <p class="switch-text">
+          Don’t have an account?
+          <button type="button" class="link-btn register-trigger">Sign up</button>
+        </p>
+      </form>
+
+      <form class="form register-form" id="registerForm" novalidate>
+        <h2 class="form-title">Register</h2>
+
+        <div class="input-group">
+          <input type="text" id="regUsername" placeholder="Username" required autocomplete="username" />
+          <span class="input-icon">👤</span>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="regEmail" placeholder="Email" required autocomplete="email" />
+          <span class="input-icon">✉</span>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="regPassword" placeholder="Password" required autocomplete="new-password" />
+          <span class="input-icon">🔒</span>
+        </div>
+
+        <button type="submit" class="btn-primary">Register</button>
+
+        <p class="switch-text">
+          Already have an account?
+          <button type="button" class="link-btn login-trigger">Sign in</button>
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-box">
+    <div class="loader-ring"></div>
+    <h3>Please wait...</h3>
+    <p id="loadingMessage">Your account is being created.</p>
+    <div class="loading-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="loading-time" id="loadingTime">Processing for 5 seconds</div>
+  </div>
+</div>
+<div class="custom-alert-overlay" id="customAlertOverlay">
+  <div class="custom-alert-box" id="customAlertBox">
+    <div class="custom-alert-icon" id="customAlertIcon">✓</div>
+    <h3 id="customAlertTitle">Success</h3>
+    <p id="customAlertMessage">Your action completed successfully.</p>
+    <button type="button" class="custom-alert-btn" id="customAlertBtn">OK</button>
+  </div>
+</div>
+  <p class="footer-credit">Made with ♥ by Soumyaranjan</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
